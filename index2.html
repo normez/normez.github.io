@@ -46,7 +46,8 @@
   </head>
   <body>
     <div class="logoContainer">
-      <img id="logoImg" class="logo" src="img/light.png">
+      <img id="lightLogo" class="logo" src="img/light.png" style="display: inline;">
+      <img id="darkLogo" class="logo" src="img/dark.png" style="display: none;">
     </div>
     <div class="content">
       <p>
@@ -63,18 +64,19 @@
     </div>
     <script>
       let isDark = false;
-      const logo = document.getElementById("logoImg")
       document.getElementById("flipColor").addEventListener("click", function(e) {
         e.preventDefault();
         if ( isDark ) {
           document.body.style.backgroundColor = "#C1CAF1";
           document.body.style.color = "#1A1B25";
-          logo.src = "img/light.png"
+          document.getElementById("darkLogo").style.display = "none"
+          document.getElementById("lightLogo").style.display = "inline"
           this.textContent = "Dark Mode"
         } else {
           document.body.style.backgroundColor = "#020203";
           document.body.style.color = "#C1CAF1";
-          logo.src = "img/dark.png"
+          document.getElementById("lightLogo").style.display = "none"
+          document.getElementById("darkLogo").style.display = "inline"
           this.textContent = "Light Mode"
         }
         isDark = !isDark;

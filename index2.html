@@ -11,10 +11,13 @@
       body, html {
         height: 100%;
         margin: 0;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-size: 18px;
         background-color: #C1CAF1;
         color: #1A1B25;
+    }
+
+      body {
         display: flex;
         justify-content: center; 
         align-items: center;
@@ -61,7 +64,7 @@
     <script>
       let isDark = false;
       const logo = document.getElementById("logoImg")
-      document.getElementById('flipColor').addEventListener('click', function(e) {
+      document.getElementById("flipColor").addEventListener("click", function(e) {
         e.preventDefault();
         if ( isDark ) {
           document.body.style.backgroundColor = "#C1CAF1";
@@ -76,10 +79,10 @@
         }
         isDark = !isDark;
        });
-      document.getElementById('contactLink').addEventListener('click', function(e) {
+      document.getElementById("contactLink").addEventListener("click", function(e) {
         e.preventDefault();
-        document.getElementById('emailLink').style.display = "inline";
-        this.style.display = 'none';
+        document.getElementById("emailLink").style.display = "inline";
+        this.style.display = "none";
        });
 
     </script>
